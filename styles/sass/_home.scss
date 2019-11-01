@@ -33,12 +33,11 @@
 
 // SEASON ADDITIONS
 .season-additions {
-    padding-top:30px;
-    display:flex;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows:50% 50%;
     figure:nth-of-type(1) {
         margin-right:100px;
-        width:calc(50% - 100px);
         position:relative;
         top:-60px;
         img {
@@ -48,7 +47,6 @@
     figure:nth-of-type(2) {
         order:1;
         margin-left:100px;
-        width:calc(50% - 100px);
         position:relative;
         bottom:-30px;
         img {
@@ -56,12 +54,10 @@
         }
     }
     div:nth-of-type(1) {
-        width:50%;
         padding:0% 10% 0% 100px;
     }
     div:nth-of-type(2) {
-        width:50%;
-        padding:0% 5% 0% 10%;
+        padding:0% 100px 0% 10%;
         text-align:right;
     }
     h4 {
