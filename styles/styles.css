@@ -1,0 +1,561 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.visuallyHidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0);
+  overflow: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: black;
+  font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Pompiere", cursive;
+  color: #4c0341;
+  margin: 0;
+}
+
+h3, h4, button {
+  text-transform: uppercase;
+}
+
+p.logo {
+  font-size: 3.58rem;
+  line-height: 3.6rem;
+  letter-spacing: 1.1px;
+  font-family: "Pompiere", cursive;
+  color: black;
+}
+
+h1 {
+  font-size: 11rem;
+  line-height: 6.4rem;
+}
+
+h2 {
+  font-size: 8rem;
+  line-height: 9.2rem;
+}
+
+h3 {
+  font-size: 5.2rem;
+  letter-spacing: 1.2px;
+}
+
+h4 {
+  font-size: 4.2rem;
+  letter-spacing: 1.3px;
+}
+
+h5 {
+  font-size: 3rem;
+  letter-spacing: 1.3px;
+}
+
+a, p, button {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+a {
+  line-height: 2.9rem;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+p {
+  line-height: 3.2rem;
+  color: black;
+}
+
+i, button {
+  color: white;
+}
+
+i {
+  font-size: 2.9rem;
+}
+
+.wrapper {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.new-line {
+  display: block;
+}
+
+.black {
+  color: black;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  padding: 10px 0px;
+  border: none;
+}
+
+.purple-btn {
+  background: #4c0341;
+}
+
+.brown-btn {
+  background: #882c07;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-size: cover;
+  background-position: center;
+}
+
+header .wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 20px;
+}
+
+header .wrapper .header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .wrapper .header-top li {
+  margin-left: 20px;
+  display: inline-block;
+}
+
+footer {
+  background: #882c07;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.home-header {
+  height: 100vh;
+  background-image: url(../assets/header-image.jpg);
+}
+
+.home-header .header-top {
+  padding-bottom: 100px;
+}
+
+.intro {
+  background: #fae5ff;
+  padding: 150px 0px 100px 0px;
+}
+
+.intro img {
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  width: 45vw;
+}
+
+.intro .wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.intro .wrapper button {
+  width: 200px;
+  margin: 20px auto;
+}
+
+.season-additions {
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.season-additions figure:nth-of-type(1) {
+  margin-right: 100px;
+  width: calc(50% - 100px);
+  position: relative;
+  top: -60px;
+}
+
+.season-additions figure:nth-of-type(1) img {
+  -webkit-box-shadow: 30px 30px #fe6f19;
+          box-shadow: 30px 30px #fe6f19;
+}
+
+.season-additions figure:nth-of-type(2) {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-left: 100px;
+  width: calc(50% - 100px);
+  position: relative;
+  bottom: -30px;
+}
+
+.season-additions figure:nth-of-type(2) img {
+  -webkit-box-shadow: -30px 30px #fe6f19;
+          box-shadow: -30px 30px #fe6f19;
+}
+
+.season-additions div:nth-of-type(1) {
+  width: 50%;
+  padding: 0% 10% 0% 100px;
+}
+
+.season-additions div:nth-of-type(2) {
+  width: 50%;
+  padding: 0% 5% 0% 10%;
+  text-align: right;
+}
+
+.season-additions h4 {
+  margin-top: 20px;
+}
+
+.season-additions button {
+  width: 160px;
+  margin: 20px 0px;
+}
+
+.brand-info {
+  background: #fae5ff;
+  padding: 150px 0px 50px 0px;
+}
+
+.brand-info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.brand-info ul li {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.brand-info ul li .icon {
+  width: 15%;
+}
+
+.brand-info ul li .icon i {
+  background: #4c0341;
+  padding: 15px;
+  border-radius: 100%;
+}
+
+.brand-info ul li .content {
+  width: calc(85% - 50px);
+  padding-bottom: 50px;
+}
+
+.brand-info ul li .content:nth-of-type(1), .brand-info ul li .content:nth-of-type(3) {
+  padding-right: 50px;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.shoe-of-the-month {
+  padding: 150px 0px 100px 0px;
+}
+
+.shoe-of-the-month figure {
+  width: 30%;
+}
+
+.shoe-of-the-month figure img {
+  -webkit-box-shadow: 30px 30px #fe6f19;
+          box-shadow: 30px 30px #fe6f19;
+}
+
+.shoe-of-the-month .content {
+  width: 70%;
+  padding-left: 100px;
+}
+
+.shoe-of-the-month .content button {
+  width: 200px;
+  margin: 20px 0px;
+}
+
+.gallery {
+  background: #fae5ff;
+  padding: 50px 0px;
+}
+
+.gallery .wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery .wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.gallery .wrapper ul li {
+  width: calc(100% / 3);
+}
+
+.gallery .wrapper ul li:nth-of-type(2) {
+  margin: 0px 40px;
+}
+
+.gallery .wrapper ul li:nth-of-type(2) img {
+  width: 100%;
+}
+
+.blog-header {
+  height: 80vh;
+  background-image: url(../assets/blog-header.jpg);
+}
+
+.blog-header .header-top {
+  padding-bottom: 40px;
+}
+
+.blog-header h2 {
+  text-align: center;
+}
+
+.contact-header {
+  height: 80vh;
+  background-image: url(../assets/contact-image.jpg);
+}
+
+.contact-header .header-top {
+  padding-bottom: 40px;
+}
+
+.contact-header h2 {
+  text-align: center;
+}

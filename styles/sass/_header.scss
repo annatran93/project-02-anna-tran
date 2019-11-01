@@ -1,0 +1,16 @@
+header {
+    background-size: cover;
+    background-position: center;
+    .wrapper {
+        flex-direction: column;
+        padding-top:20px;
+        .header-top {
+            display:flex;
+            justify-content:space-between;
+            li {
+                margin-left:20px;
+                display:inline-block;
+            }
+        }
+    }
+}

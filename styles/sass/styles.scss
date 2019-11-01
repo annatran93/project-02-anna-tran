@@ -1,0 +1,20 @@
+$purple: rgb(76, 3, 65);
+$orange: rgb(254, 111, 25);
+$white: rgb(255,255,255);
+$black: rgb(0,0,0);
+$brown: rgb(136,44,7);
+$pink: rgb(250,229,255);
+
+$headings: 'Pompiere', cursive;
+$base: 'Lato', sans-serif;
+
+
+@import 'setup';
+@import 'typography';
+@import 'base';
+@import 'header';
+@import 'form';
+@import 'footer';
+@import 'home';
+@import 'blog';
+@import 'contact';

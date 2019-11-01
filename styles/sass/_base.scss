@@ -1,0 +1,48 @@
+.wrapper {
+    width:80%;
+    display:flex;
+    margin:0 auto;
+    // border: 1px solid orange;
+    flex-wrap:wrap;
+    // max-width:
+}
+
+.new-line {
+    display:block;
+}
+
+.black {
+    color:$black;
+}
+
+.uppercase {
+    text-transform:uppercase;
+}
+
+p {
+    margin:0;
+}
+
+button {
+    padding:10px 0px;
+    border:none;
+}
+
+.purple-btn {
+    background: $purple;
+}
+
+.brown-btn {
+    background: $brown;
+}
+
+img {
+    display:block;
+    max-width:100%;
+}
+
+ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
