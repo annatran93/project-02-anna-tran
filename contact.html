@@ -44,10 +44,8 @@
                                 target="_blank"><i class="fab fa-snapchat-ghost"></i></a></li>
                     </ul>
                 </div>
-                <h4>
-                    <a class="email" href="mailto:info@email.com">info@email.com</a>
-                </h4>
-                <a href="123-456-7890">123-456-7890</a>
+                <a class="email" href="mailto:info@email.com">info@email.com</a>
+                <span class="new-line"><a class="phone" href="123-456-7890">123-456-7890</a></span>
                 <p>123 Queen Street West, Unit 10</p>
                 <p>Toronto, ON</p>
                 <p>M5V 2D5</p>
@@ -56,15 +54,14 @@
                 <form action="submit" class="submit">
                     <div class="personal-information">
                         <label for="name" class="visuallyhidden"></label>
-                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="text" id="name" name="name" placeholder="Name" required maxlength="35">
 
                         <label for="email" class="visuallyhidden"></label>
-                        <input type="email" id="email" name="email" placeholder="Email address" required>
+                        <input type="email" id="email" name="email" placeholder="Email address" required maxlength="35">
                     </div>
 
                     <label for="comment" class="visuallyhidden"></label>
-                    <input type="text" id="comment" name="comment" placeholder="Message" required>
-                    <!-- add maxlength? -->
+                    <textarea id="comment" name="comment" placeholder="Comment" required></textarea>
                     <button class="brown-btn">Submit</button>
                 </form>
             </section>

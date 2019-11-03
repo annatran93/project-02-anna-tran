@@ -85,6 +85,9 @@
             display:grid;
             grid-template-columns:85% 15%;
             margin-bottom:60px;
+            h3 {
+                padding-bottom:30px;
+            }
             .comment-container {
                 grid-column-start:1;
                 grid-column-end:2;

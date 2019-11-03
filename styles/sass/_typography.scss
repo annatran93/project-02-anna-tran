@@ -51,7 +51,7 @@ h5 {
     letter-spacing:1.3px;
 }
 
-a, p, button, input::placeholder, input {
+a, p, button, input::placeholder, input, textarea::placeholder, textarea {
     font-size:2rem;
     letter-spacing:1px;
 }
@@ -60,16 +60,21 @@ a {
     line-height:2.9rem;
     text-decoration:none;
     color:$black;
-    padding:5px;
+    padding:5px 10px;
+    text-transform:uppercase;
 }
 
-p, input::placeholder {
+p, input::placeholder, textarea::placeholder {
     line-height:3.2rem;
     color:$black;
 }
 
-i, button {
+.brand-info i, button {
     color:$white;
+}
+
+.contact-info i {
+    color:$purple;
 }
 
 i {

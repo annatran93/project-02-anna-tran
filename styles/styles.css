@@ -231,22 +231,22 @@ h5 {
   letter-spacing: 1.3px;
 }
 
-a, p, button, input::-webkit-input-placeholder, input {
+a, p, button, input::-webkit-input-placeholder, input, textarea::-webkit-input-placeholder, textarea {
   font-size: 2rem;
   letter-spacing: 1px;
 }
 
-a, p, button, input:-ms-input-placeholder, input {
+a, p, button, input:-ms-input-placeholder, input, textarea:-ms-input-placeholder, textarea {
   font-size: 2rem;
   letter-spacing: 1px;
 }
 
-a, p, button, input::-ms-input-placeholder, input {
+a, p, button, input::-ms-input-placeholder, input, textarea::-ms-input-placeholder, textarea {
   font-size: 2rem;
   letter-spacing: 1px;
 }
 
-a, p, button, input::placeholder, input {
+a, p, button, input::placeholder, input, textarea::placeholder, textarea {
   font-size: 2rem;
   letter-spacing: 1px;
 }
@@ -255,50 +255,40 @@ a {
   line-height: 2.9rem;
   text-decoration: none;
   color: black;
-  padding: 5px;
+  padding: 5px 10px;
+  text-transform: uppercase;
 }
 
-p, input::-webkit-input-placeholder {
+p, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   line-height: 3.2rem;
   color: black;
 }
 
-p, input:-ms-input-placeholder {
+p, input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   line-height: 3.2rem;
   color: black;
 }
 
-p, input::-ms-input-placeholder {
+p, input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   line-height: 3.2rem;
   color: black;
 }
 
-p, input::placeholder {
+p, input::placeholder, textarea::placeholder {
   line-height: 3.2rem;
   color: black;
 }
 
-i, button {
+.brand-info i, button {
   color: white;
+}
+
+.contact-info i {
+  color: #4c0341;
 }
 
 i {
   font-size: 2.9rem;
-}
-
-body {
-  background: #fae5ff;
-}
-
-.wrapper {
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 1450px;
 }
 
 .new-line {
@@ -317,10 +307,6 @@ body {
   text-transform: uppercase;
 }
 
-p {
-  margin: 0;
-}
-
 button {
   padding: 10px 0px;
   border: none;
@@ -328,10 +314,74 @@ button {
 
 .purple-btn {
   background: #4c0341;
+  border: 1px solid #4c0341;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.purple-btn:hover {
+  color: #4c0341;
+  border: 1px solid #4c0341;
+  background: white;
 }
 
 .brown-btn {
   background: #882c07;
+  border: 1px solid #882c07;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.brown-btn:hover {
+  color: #882c07;
+  border: 1px solid #882c07;
+  background: white;
+}
+
+header a {
+  position: relative;
+  z-index: 1;
+}
+
+header a::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+header a:hover {
+  color: white;
+}
+
+header a:hover::after {
+  background: #4c0341;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+body {
+  background: #fae5ff;
+}
+
+.wrapper {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1450px;
+}
+
+p {
+  margin: 0;
 }
 
 img {
@@ -370,7 +420,7 @@ header .wrapper .header-top {
 }
 
 header .wrapper .header-top li {
-  margin-left: 75px;
+  margin-left: 30px;
   display: inline-block;
 }
 
@@ -384,7 +434,7 @@ form {
           flex-direction: column;
 }
 
-input {
+input, textarea {
   background: none;
   border: none;
 }
@@ -400,11 +450,12 @@ input[name=name] {
   margin-right: 30px;
 }
 
-input[name=comment] {
+textarea {
   width: 100%;
   border: 1px solid #fe6f19;
   margin: 30px 0px;
   padding: 10px 15px 200px 15px;
+  resize: none;
 }
 
 button {
@@ -761,6 +812,10 @@ footer p {
   margin-bottom: 60px;
 }
 
+.blog-page main .comments h3 {
+  padding-bottom: 30px;
+}
+
 .blog-page main .comments .comment-container {
   -ms-grid-column: 1;
       grid-column-start: 1;
@@ -813,27 +868,52 @@ footer p {
 }
 
 .contact-page .contact-info {
-  width: 25%;
+  width: 30%;
 }
 
 .contact-page .contact-info a.email {
   color: #4c0341;
+  font-family: "Pompiere", cursive;
+  font-size: 3rem;
+}
+
+.contact-page .contact-info a {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.contact-page .contact-info a:hover {
+  color: #fe6f19;
+  padding-left: 50px;
 }
 
 .contact-page .contact-info p {
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
-.contact-page .social-media ul {
+.contact-page .contact-info .social-media ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 120px;
+  padding-bottom: 20px;
 }
 
-.contact-page .social-media ul i {
-  color: #4c0341;
-  padding-right: 10px;
+.contact-page .contact-info .social-media ul a:hover {
+  padding-left: 10px;
+}
+
+.contact-page .contact-info .social-media ul a:hover i {
+  -webkit-transition: color 1s, -webkit-transform .5s;
+  transition: color 1s, -webkit-transform .5s;
+  transition: transform .5s, color 1s;
+  transition: transform .5s, color 1s, -webkit-transform .5s;
+}
+
+.contact-page .contact-info .social-media ul a:hover i:hover {
+  color: #fe6f19;
+  -webkit-transform: rotateZ(40deg);
+          transform: rotateZ(40deg);
 }
 
 .contact-page .form {

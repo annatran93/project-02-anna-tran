@@ -11,37 +11,8 @@ body {
     max-width:1450px;
 }
 
-.new-line {
-    display:block;
-}
-
-.black {
-    color:$black;
-}
-
-.date {
-    font-weight:bold;
-}
-
-.uppercase {
-    text-transform:uppercase;
-}
-
 p {
     margin:0;
-}
-
-button {
-    padding:10px 0px;
-    border:none;
-}
-
-.purple-btn {
-    background: $purple;
-}
-
-.brown-btn {
-    background: $brown;
 }
 
 img {

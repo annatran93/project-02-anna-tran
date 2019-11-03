@@ -1,0 +1,26 @@
+button {
+    padding:10px 0px;
+    border:none;
+}
+
+.purple-btn {
+    background: $purple;
+    border:1px solid $purple;
+    transition: all.5s;
+    &:hover {
+        color:$purple;
+        border:1px solid $purple;
+        background:$white;
+    }
+}
+
+.brown-btn {
+    background: $brown;
+    border:1px solid $brown;
+    transition: all .5s;
+    &:hover {
+        color:$brown;
+        border:1px solid $brown;
+        background:$white;
+    }
+}
