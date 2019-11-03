@@ -374,6 +374,16 @@ header .wrapper .header-top li {
   display: inline-block;
 }
 
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 input {
   background: none;
   border: none;
@@ -394,7 +404,11 @@ input[name=comment] {
   width: 100%;
   border: 1px solid #fe6f19;
   margin: 30px 0px;
-  padding: 10px 15px 130px 15px;
+  padding: 10px 15px 200px 15px;
+}
+
+button {
+  margin-bottom: 30px;
 }
 
 .personal-information {
@@ -404,6 +418,19 @@ input[name=comment] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+form.comment {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+form.submit {
+  background: white;
+  -webkit-box-shadow: -30px 30px #fe6f19;
+          box-shadow: -30px 30px #fe6f19;
+  padding: 30px 60px;
 }
 
 footer {
@@ -761,28 +788,57 @@ footer p {
   padding: 0px 0px 60px 30px;
 }
 
-.blog-page main form {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .contact-header {
-  height: 80vh;
+  height: 60vh;
   background-image: url(../assets/contact-image.jpg);
 }
 
 .contact-header .header-top {
-  padding-bottom: 40px;
+  padding-bottom: 140px;
 }
 
 .contact-header h2 {
   text-align: center;
+}
+
+.contact-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.contact-page .contact-info {
+  width: 25%;
+}
+
+.contact-page .contact-info a.email {
+  color: #4c0341;
+}
+
+.contact-page .contact-info p {
+  padding-left: 5px;
+}
+
+.contact-page .social-media ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 120px;
+}
+
+.contact-page .social-media ul i {
+  color: #4c0341;
+  padding-right: 10px;
+}
+
+.contact-page .form {
+  width: 70%;
+  position: absolute;
+  top: -200px;
+  right: -100px;
 }
