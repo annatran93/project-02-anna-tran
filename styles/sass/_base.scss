@@ -1,10 +1,14 @@
+body {
+    background: $pink;
+}
+
 .wrapper {
     width:80%;
     display:flex;
     margin:0 auto;
     // border: 1px solid orange;
     flex-wrap:wrap;
-    // max-width:
+    max-width:1450px;
 }
 
 .new-line {
@@ -13,6 +17,10 @@
 
 .black {
     color:$black;
+}
+
+.date {
+    font-weight:bold;
 }
 
 .uppercase {
@@ -39,9 +47,11 @@ button {
 img {
     display:block;
     max-width:100%;
+    /* RESPONSIVE DESIGN */
+    /* This ensures that images are never larger than their parent elements. */
 }
 
-ul {
+ul, ol {
     list-style:none;
     margin:0;
     padding:0;

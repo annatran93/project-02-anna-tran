@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5 {
     margin:0;
 }
 
-h3, h4, button {
+h3, h4, h5, button {
     text-transform: uppercase;
 }
 
@@ -51,7 +51,7 @@ h5 {
     letter-spacing:1.3px;
 }
 
-a, p, button {
+a, p, button, input::placeholder, input {
     font-size:2rem;
     letter-spacing:1px;
 }
@@ -63,7 +63,7 @@ a {
     padding:5px;
 }
 
-p {
+p, input::placeholder {
     line-height:3.2rem;
     color:$black;
 }

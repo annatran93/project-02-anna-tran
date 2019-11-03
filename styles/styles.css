@@ -194,7 +194,7 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
-h3, h4, button {
+h3, h4, h5, button {
   text-transform: uppercase;
 }
 
@@ -231,7 +231,22 @@ h5 {
   letter-spacing: 1.3px;
 }
 
-a, p, button {
+a, p, button, input::-webkit-input-placeholder, input {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+a, p, button, input:-ms-input-placeholder, input {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+a, p, button, input::-ms-input-placeholder, input {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+a, p, button, input::placeholder, input {
   font-size: 2rem;
   letter-spacing: 1px;
 }
@@ -243,7 +258,22 @@ a {
   padding: 5px;
 }
 
-p {
+p, input::-webkit-input-placeholder {
+  line-height: 3.2rem;
+  color: black;
+}
+
+p, input:-ms-input-placeholder {
+  line-height: 3.2rem;
+  color: black;
+}
+
+p, input::-ms-input-placeholder {
+  line-height: 3.2rem;
+  color: black;
+}
+
+p, input::placeholder {
   line-height: 3.2rem;
   color: black;
 }
@@ -256,6 +286,10 @@ i {
   font-size: 2.9rem;
 }
 
+body {
+  background: #fae5ff;
+}
+
 .wrapper {
   width: 80%;
   display: -webkit-box;
@@ -264,6 +298,7 @@ i {
   margin: 0 auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 1450px;
 }
 
 .new-line {
@@ -272,6 +307,10 @@ i {
 
 .black {
   color: black;
+}
+
+.date {
+  font-weight: bold;
 }
 
 .uppercase {
@@ -298,9 +337,11 @@ button {
 img {
   display: block;
   max-width: 100%;
+  /* RESPONSIVE DESIGN */
+  /* This ensures that images are never larger than their parent elements. */
 }
 
-ul {
+ul, ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -329,8 +370,40 @@ header .wrapper .header-top {
 }
 
 header .wrapper .header-top li {
-  margin-left: 20px;
+  margin-left: 75px;
   display: inline-block;
+}
+
+input {
+  background: none;
+  border: none;
+}
+
+input[name=name], input[name=email] {
+  padding: 10px 15px;
+  width: calc(50% - 15px);
+  border-bottom: 1px solid #fe6f19;
+  margin-top: 30px;
+}
+
+input[name=name] {
+  margin-right: 30px;
+}
+
+input[name=comment] {
+  width: 100%;
+  border: 1px solid #fe6f19;
+  margin: 30px 0px;
+  padding: 10px 15px 130px 15px;
+}
+
+.personal-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer {
@@ -349,17 +422,16 @@ footer p {
 }
 
 .home-header .header-top {
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 .intro {
-  background: #fae5ff;
-  padding: 150px 0px 100px 0px;
+  padding: 200px 0px;
 }
 
 .intro img {
   position: absolute;
-  top: 100px;
+  top: 200px;
   right: 0px;
   width: 45vw;
 }
@@ -378,23 +450,28 @@ footer p {
 }
 
 .season-additions {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  -ms-grid-rows: 50% 50%;
-      grid-template-rows: 50% 50%;
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: white;
+  position: relative;
+  height: 1000px;
 }
 
 .season-additions figure:nth-of-type(1) {
   margin-right: 100px;
-  position: relative;
+  width: calc(50% - 100px);
+  position: absolute;
   top: -60px;
 }
 
 .season-additions figure:nth-of-type(1) img {
   -webkit-box-shadow: 30px 30px #fe6f19;
           box-shadow: 30px 30px #fe6f19;
+  width: 100%;
 }
 
 .season-additions figure:nth-of-type(2) {
@@ -402,22 +479,39 @@ footer p {
       -ms-flex-order: 1;
           order: 1;
   margin-left: 100px;
-  position: relative;
+  width: calc(50% - 100px);
+  position: absolute;
   bottom: -30px;
+  right: 0;
 }
 
 .season-additions figure:nth-of-type(2) img {
   -webkit-box-shadow: -30px 30px #fe6f19;
           box-shadow: -30px 30px #fe6f19;
+  width: 100%;
 }
 
-.season-additions div:nth-of-type(1) {
-  padding: 0% 10% 0% 100px;
+.season-additions .wrapper {
+  width: 100%;
 }
 
-.season-additions div:nth-of-type(2) {
-  padding: 0% 100px 0% 10%;
+.season-additions .wrapper div.empty {
+  content: '';
+  display: block;
+  height: 0px;
+}
+
+.season-additions .wrapper div {
+  width: 50%;
+}
+
+.season-additions .wrapper div.right-content {
+  padding: 5% 0 0 100px;
+}
+
+.season-additions .wrapper div.left-content {
   text-align: right;
+  padding: 5% 100px 0 0;
 }
 
 .season-additions h4 {
@@ -430,7 +524,6 @@ footer p {
 }
 
 .brand-info {
-  background: #fae5ff;
   padding: 150px 0px 50px 0px;
 }
 
@@ -474,31 +567,32 @@ footer p {
   width: 100%;
 }
 
-.shoe-of-the-month {
+.popular {
   padding: 150px 0px 100px 0px;
+  background: white;
 }
 
-.shoe-of-the-month figure {
+.popular figure {
   width: 30%;
+  position: relative;
+  top: -30px;
 }
 
-.shoe-of-the-month figure img {
+.popular figure img {
   -webkit-box-shadow: 30px 30px #fe6f19;
           box-shadow: 30px 30px #fe6f19;
 }
 
-.shoe-of-the-month .content {
+.popular .content {
   width: 70%;
-  padding-left: 100px;
 }
 
-.shoe-of-the-month .content button {
+.popular .content button {
   width: 200px;
   margin: 20px 0px;
 }
 
 .gallery {
-  background: #fae5ff;
   padding: 50px 0px;
 }
 
@@ -518,29 +612,166 @@ footer p {
           justify-content: space-between;
 }
 
-.gallery .wrapper ul li {
-  width: calc(100% / 3);
-}
-
-.gallery .wrapper ul li:nth-of-type(2) {
-  margin: 0px 40px;
-}
-
-.gallery .wrapper ul li:nth-of-type(2) img {
-  width: 100%;
-}
-
 .blog-header {
   height: 80vh;
   background-image: url(../assets/blog-header.jpg);
 }
 
 .blog-header .header-top {
-  padding-bottom: 40px;
+  padding-bottom: 240px;
 }
 
 .blog-header h2 {
   text-align: center;
+}
+
+.blog-page {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 25% 5% 55% 5%;
+      grid-template-columns: 10% 25% 5% 55% 5%;
+  margin-top: 60px;
+  position: relative;
+}
+
+.blog-page aside, .blog-page .featured-post {
+  background: white;
+}
+
+.blog-page .aside-image {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: 60px;
+}
+
+.blog-page .aside-image img {
+  width: 95%;
+}
+
+.blog-page aside {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  margin-top: 90px;
+  position: absolute;
+  z-index: -1;
+}
+
+.blog-page aside .aside-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 560px 30px 30px 30px;
+}
+
+.blog-page aside .aside-wrapper .recent-posts {
+  padding-top: 60px;
+}
+
+.blog-page aside .aside-wrapper .recent-posts ul {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.blog-page aside .aside-wrapper .recent-posts ul p {
+  display: inline-block;
+}
+
+.blog-page main {
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: -1;
+}
+
+.blog-page main .main-image {
+  position: absolute;
+  top: -300px;
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  width: calc(100% - 30px);
+  -webkit-box-shadow: -30px 30px #fe6f19;
+          box-shadow: -30px 30px #fe6f19;
+  margin-left: 30px;
+}
+
+.blog-page main .main-image img {
+  width: 100%;
+}
+
+.blog-page main .featured-post {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 85% 15%;
+      grid-template-columns: 85% 15%;
+  margin-bottom: 60px;
+}
+
+.blog-page main .featured-post .featured-post-content {
+  padding: 530px 0px 60px 60px;
+}
+
+.blog-page main .featured-post .featured-post-content p {
+  padding: 15px 0px;
+}
+
+.blog-page main .featured-post .featured-post-content h3 + p {
+  padding: 0px 0px 30px 0px;
+}
+
+.blog-page main .comments {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 85% 15%;
+      grid-template-columns: 85% 15%;
+  margin-bottom: 60px;
+}
+
+.blog-page main .comments .comment-container {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.blog-page main .comments .comment-container article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blog-page main .comments .comment-container article figure {
+  width: 100px;
+  height: 100px;
+}
+
+.blog-page main .comments .comment-container article figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.blog-page main .comments .comment-container article .comment {
+  width: 90%;
+  padding: 0px 0px 60px 30px;
+}
+
+.blog-page main form {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .contact-header {
