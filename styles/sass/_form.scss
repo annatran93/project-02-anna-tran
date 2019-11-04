@@ -50,6 +50,12 @@ form.submit {
     padding:30px 60px;
 }
 
+@media (max-width: 1175px) {
+    form.comment button {
+        margin:0;
+    }
+}
+
 @media (max-width: 1050px) {
     form.submit {
         box-shadow:none;
