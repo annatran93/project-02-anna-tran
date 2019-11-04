@@ -16,6 +16,7 @@
     padding-bottom:100px;
     position:relative;
     .contact-info {
+        width:30%;
         a.email {
             color:$purple;
             font-family:$headings;
@@ -57,11 +58,24 @@
     }
 }
 
-@media (max-width: 1355px), (max-height:910px) {
+@media (max-height:910px) {
+    html {
+        font-size:50%;
+    }
     .contact-header {
         height:auto;
-        padding-bottom:100px;
+        padding-bottom:230px;
     }
+}
+
+@media (max-width: 1355px) {
+    .contact-page .form {
+        right:-50px;
+    }
+}
+
+@media (max-width: 1050px) {
+    // 1120px
     .contact-page {
         position:static;
         .contact-info {
@@ -95,10 +109,7 @@
             width:100%;
         }
     }
-}
-
-@media (max-width: 500px) {
-    .contact-header .header-top {
-        padding-bottom:80px;
+    .contact-page {
+        padding-bottom: 30px;
     }
 }

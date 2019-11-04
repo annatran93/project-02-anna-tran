@@ -484,7 +484,7 @@ form.submit {
   padding: 30px 60px;
 }
 
-@media (max-width: 1355px) {
+@media (max-width: 1050px) {
   form.submit {
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -495,6 +495,9 @@ form.submit {
   form.submit {
     padding: 0;
     background: none;
+  }
+  input[name=name] {
+    margin: 0;
   }
 }
 
@@ -877,6 +880,10 @@ footer p {
   position: relative;
 }
 
+.contact-page .contact-info {
+  width: 30%;
+}
+
 .contact-page .contact-info a.email {
   color: #4c0341;
   font-family: "Pompiere", cursive;
@@ -932,11 +939,23 @@ footer p {
   right: -100px;
 }
 
-@media (max-width: 1355px), (max-height: 910px) {
+@media (max-height: 910px) {
+  html {
+    font-size: 50%;
+  }
   .contact-header {
     height: auto;
-    padding-bottom: 100px;
+    padding-bottom: 230px;
   }
+}
+
+@media (max-width: 1355px) {
+  .contact-page .form {
+    right: -50px;
+  }
+}
+
+@media (max-width: 1050px) {
   .contact-page {
     position: static;
   }
@@ -980,10 +999,7 @@ footer p {
   .personal-information input {
     width: 100%;
   }
-}
-
-@media (max-width: 500px) {
-  .contact-header .header-top {
-    padding-bottom: 80px;
+  .contact-page {
+    padding-bottom: 30px;
   }
 }
