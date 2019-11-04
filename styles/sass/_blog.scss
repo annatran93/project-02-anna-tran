@@ -20,31 +20,30 @@
     }
     // ASIDE --------------------------------------------
     .aside-image {
-        grid-column-start:1;
-        grid-column-end:3;
         margin-top:60px;
+        position:absolute;
+        width:30%;
         img {
-            width:95%;
+            width:100%;
         }
     }
     aside {
         grid-column-start:2;
         grid-column-end:3;
         margin-top:90px;
-        position:absolute;
-        z-index:-1;
+        height:1000px;
         .aside-wrapper {
             display:flex;
             flex-direction:column;
             justify-content:flex-end;
-            padding: 560px 30px 30px 30px;
+            padding: 490px 30px 30px 30px;
             .recent-posts {
                 padding-top: 60px;
                 ul {
                     list-style: disc;
                     list-style-position:inside;
-                    p {
-                        display:inline-block;
+                    a {
+                        text-transform: capitalize;
                     }
                 }
             }
@@ -173,6 +172,7 @@
         aside {
             position:static;
             margin-bottom:60px;
+            height:100%;
         }
         aside .aside-wrapper {
             padding: 60px 60px;

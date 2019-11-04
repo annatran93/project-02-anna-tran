@@ -746,14 +746,13 @@ footer p {
 }
 
 .blog-page .aside-image {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 3;
   margin-top: 60px;
+  position: absolute;
+  width: 30%;
 }
 
 .blog-page .aside-image img {
-  width: 95%;
+  width: 100%;
 }
 
 .blog-page aside {
@@ -761,8 +760,7 @@ footer p {
       grid-column-start: 2;
   grid-column-end: 3;
   margin-top: 90px;
-  position: absolute;
-  z-index: -1;
+  height: 1000px;
 }
 
 .blog-page aside .aside-wrapper {
@@ -776,7 +774,7 @@ footer p {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 560px 30px 30px 30px;
+  padding: 490px 30px 30px 30px;
 }
 
 .blog-page aside .aside-wrapper .recent-posts {
@@ -788,8 +786,8 @@ footer p {
   list-style-position: inside;
 }
 
-.blog-page aside .aside-wrapper .recent-posts ul p {
-  display: inline-block;
+.blog-page aside .aside-wrapper .recent-posts ul a {
+  text-transform: capitalize;
 }
 
 .blog-page main {
@@ -944,6 +942,7 @@ footer p {
   .blog-page aside {
     position: static;
     margin-bottom: 60px;
+    height: 100%;
   }
   .blog-page aside .aside-wrapper {
     padding: 60px 60px;
