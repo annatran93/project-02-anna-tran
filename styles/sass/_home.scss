@@ -10,11 +10,15 @@
 // INTRO
 .intro {
     padding:200px 0px;
-    img {
+    position:relative;
+    .intro-image {
         position:absolute;
-        top:200px;
+        top:-80vh;
         right:0px;
         width:45vw;
+        img {
+            width:100%;
+        }
     }
     .wrapper {
         flex-direction:column;
@@ -59,21 +63,19 @@
         }
     }
     .wrapper {
-        width:100%;
-        div.empty {
-            content:'';
-            display:block;
-            height:0px;
-        }
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
         div {
             width: 50%;
         }
         div.right-content {
-            padding:5% 0 0 100px;
+            padding-left:100px;
+            align-self:flex-end;
         }
         div.left-content {
             text-align:right;
-            padding:5% 100px 0 0;
+            padding-right:100px;
         }
     }
     h4 {
@@ -105,10 +107,9 @@
                 }
             }
             .content {
-                width:calc(85% - 50px);
+                width:85%;
                 padding-bottom:50px;
-                &:nth-of-type(1),
-                &:nth-of-type(3) {
+                &:nth-of-type(odd) {
                     padding-right:50px;
                 }
             }
@@ -123,7 +124,7 @@
 }
 
 // POPULAR
-.popular {
+.monthly-shoe {
     padding:150px 0px 100px 0px;
     background:$white;
     figure {
@@ -153,6 +154,158 @@
             display:flex;
             width:100%;
             justify-content:space-between;
+            li {
+                width:calc(100% / 3);
+                &:nth-of-type(2) {
+                    margin:0px 10px;
+                }
+                img {
+                    width:100%;
+                }
+            }
         }
+    }
+}
+
+@media (max-width:1690px) {
+    .intro .intro-image {
+        top:-70vh;
+    }
+    .season-additions {
+        height:900px;
+    }
+}
+
+@media (max-width:1580px) {
+    .monthly-shoe {
+        .content {
+            width:70%;
+            padding-left: 60px;
+        }
+    }
+}
+
+@media (max-width:1490px) {
+    .intro .intro-image {
+        top:-60vh;
+    }
+    .season-additions {
+        height:800px;
+    }
+}
+
+@media (max-width:1280px) {
+    .intro .intro-image {
+        top:-50vh;
+    }
+    .intro {
+        padding:200px 0px 100px 0px;
+    }
+    .season-additions {
+        padding: 0;
+        height:auto;
+        figure:nth-of-type(1) {
+            margin-right: 0;
+            width:100%;
+            position:static;
+            img {
+                box-shadow: none;
+                height:400px;
+                object-fit: cover;
+                // display:none;
+            }
+        }
+        figure:nth-of-type(2) {
+            margin-left: 0;
+            order:0;
+            width:100%;
+            position:static;
+            img {
+                box-shadow: none;
+                height:400px;
+                object-fit: cover;
+                // display:none;
+            }
+        }
+        .wrapper {
+            display:block;
+            div {
+                width: 100%;
+                padding: 60px 0;
+            }
+            div.right-content {
+                padding-left:0px;
+                text-align:center;
+            }
+            div.left-content {
+                text-align:center;
+                padding-right:0px;
+            }
+        }
+    }
+    .monthly-shoe {
+        .wrapper {
+            flex-direction: column;
+            text-align:center;
+        }
+        figure {
+            width:100%;
+            position:relative;
+            img {
+                box-shadow: none;
+                margin:0 auto;
+            }
+        }
+        .content {
+            width:100%;
+            padding-left: 0px;
+        }
+    }
+}
+
+
+@media(max-width:1090px) {
+    .home-header {
+        height:auto;
+        padding-bottom: 260px;
+    }
+    .intro .intro-image {
+        display:none;
+    }
+    .intro {
+        padding:100px 0px;
+    }
+    .brand-info ul li {
+        width:100%;
+    }
+    .brand-info ul li .content {
+        width:85%;
+        &:nth-of-type(1),
+        &:nth-of-type(3) {
+            padding-right:0px;
+        }
+    }
+}
+
+@media(max-width:900px) {
+    .gallery .wrapper ul li {
+        width:calc(100% / 2);
+    }
+    .gallery .wrapper ul li:nth-of-type(2) {
+        display:none;
+    }
+    .gallery .wrapper ul li:nth-of-type(3) {
+        margin-left: 5px;
+    }
+}
+
+@media(max-width:600px) {
+    .brand-info ul li .icon,
+    .brand-info ul li .content {
+        width:100%;
+        text-align:center;
+    }
+    .brand-info ul li .icon i {
+        margin-bottom: 15px;
     }
 }

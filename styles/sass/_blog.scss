@@ -44,6 +44,10 @@
                     list-style-position:inside;
                     a {
                         text-transform: capitalize;
+                        transition: all .5s;
+                        &:hover {
+                            color:$orange;
+                        }
                     }
                 }
             }

@@ -534,13 +534,18 @@ footer p {
 
 .intro {
   padding: 200px 0px;
+  position: relative;
 }
 
-.intro img {
+.intro .intro-image {
   position: absolute;
-  top: 200px;
+  top: -80vh;
   right: 0px;
   width: 45vw;
+}
+
+.intro .intro-image img {
+  width: 100%;
 }
 
 .intro .wrapper {
@@ -599,13 +604,16 @@ footer p {
 }
 
 .season-additions .wrapper {
-  width: 100%;
-}
-
-.season-additions .wrapper div.empty {
-  content: '';
-  display: block;
-  height: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .season-additions .wrapper div {
@@ -613,12 +621,14 @@ footer p {
 }
 
 .season-additions .wrapper div.right-content {
-  padding: 5% 0 0 100px;
+  padding-left: 100px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .season-additions .wrapper div.left-content {
   text-align: right;
-  padding: 5% 100px 0 0;
+  padding-right: 100px;
 }
 
 .season-additions h4 {
@@ -662,11 +672,11 @@ footer p {
 }
 
 .brand-info ul li .content {
-  width: calc(85% - 50px);
+  width: 85%;
   padding-bottom: 50px;
 }
 
-.brand-info ul li .content:nth-of-type(1), .brand-info ul li .content:nth-of-type(3) {
+.brand-info ul li .content:nth-of-type(odd) {
   padding-right: 50px;
 }
 
@@ -674,27 +684,27 @@ footer p {
   width: 100%;
 }
 
-.popular {
+.monthly-shoe {
   padding: 150px 0px 100px 0px;
   background: white;
 }
 
-.popular figure {
+.monthly-shoe figure {
   width: 30%;
   position: relative;
   top: -30px;
 }
 
-.popular figure img {
+.monthly-shoe figure img {
   -webkit-box-shadow: 30px 30px #fe6f19;
           box-shadow: 30px 30px #fe6f19;
 }
 
-.popular .content {
+.monthly-shoe .content {
   width: 70%;
 }
 
-.popular .content button {
+.monthly-shoe .content button {
   width: 200px;
   margin: 20px 0px;
 }
@@ -717,6 +727,163 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.gallery .wrapper ul li {
+  width: calc(100% / 3);
+}
+
+.gallery .wrapper ul li:nth-of-type(2) {
+  margin: 0px 10px;
+}
+
+.gallery .wrapper ul li img {
+  width: 100%;
+}
+
+@media (max-width: 1690px) {
+  .intro .intro-image {
+    top: -70vh;
+  }
+  .season-additions {
+    height: 900px;
+  }
+}
+
+@media (max-width: 1580px) {
+  .monthly-shoe .content {
+    width: 70%;
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 1490px) {
+  .intro .intro-image {
+    top: -60vh;
+  }
+  .season-additions {
+    height: 800px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .intro .intro-image {
+    top: -50vh;
+  }
+  .intro {
+    padding: 200px 0px 100px 0px;
+  }
+  .season-additions {
+    padding: 0;
+    height: auto;
+  }
+  .season-additions figure:nth-of-type(1) {
+    margin-right: 0;
+    width: 100%;
+    position: static;
+  }
+  .season-additions figure:nth-of-type(1) img {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .season-additions figure:nth-of-type(2) {
+    margin-left: 0;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 100%;
+    position: static;
+  }
+  .season-additions figure:nth-of-type(2) img {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .season-additions .wrapper {
+    display: block;
+  }
+  .season-additions .wrapper div {
+    width: 100%;
+    padding: 60px 0;
+  }
+  .season-additions .wrapper div.right-content {
+    padding-left: 0px;
+    text-align: center;
+  }
+  .season-additions .wrapper div.left-content {
+    text-align: center;
+    padding-right: 0px;
+  }
+  .monthly-shoe .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .monthly-shoe figure {
+    width: 100%;
+    position: relative;
+  }
+  .monthly-shoe figure img {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0 auto;
+  }
+  .monthly-shoe .content {
+    width: 100%;
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 1090px) {
+  .home-header {
+    height: auto;
+    padding-bottom: 260px;
+  }
+  .intro .intro-image {
+    display: none;
+  }
+  .intro {
+    padding: 100px 0px;
+  }
+  .brand-info ul li {
+    width: 100%;
+  }
+  .brand-info ul li .content {
+    width: 85%;
+  }
+  .brand-info ul li .content:nth-of-type(1), .brand-info ul li .content:nth-of-type(3) {
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery .wrapper ul li {
+    width: calc(100% / 2);
+  }
+  .gallery .wrapper ul li:nth-of-type(2) {
+    display: none;
+  }
+  .gallery .wrapper ul li:nth-of-type(3) {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-info ul li .icon,
+  .brand-info ul li .content {
+    width: 100%;
+    text-align: center;
+  }
+  .brand-info ul li .icon i {
+    margin-bottom: 15px;
+  }
 }
 
 .blog-header {
@@ -788,6 +955,12 @@ footer p {
 
 .blog-page aside .aside-wrapper .recent-posts ul a {
   text-transform: capitalize;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.blog-page aside .aside-wrapper .recent-posts ul a:hover {
+  color: #fe6f19;
 }
 
 .blog-page main {
