@@ -484,6 +484,20 @@ form.submit {
   padding: 30px 60px;
 }
 
+@media (max-width: 1355px) {
+  form.submit {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+@media (max-width: 750px) {
+  form.submit {
+    padding: 0;
+    background: none;
+  }
+}
+
 footer {
   background: #882c07;
 }
@@ -846,6 +860,8 @@ footer p {
 .contact-header {
   height: 60vh;
   background-image: url(../assets/contact-image.jpg);
+  background-size: cover;
+  background-position: left;
 }
 
 .contact-header .header-top {
@@ -857,18 +873,8 @@ footer p {
 }
 
 .contact-page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding-bottom: 100px;
   position: relative;
-}
-
-.contact-page .contact-info {
-  width: 30%;
 }
 
 .contact-page .contact-info a.email {
@@ -891,12 +897,15 @@ footer p {
   padding-left: 10px;
 }
 
+.contact-page .contact-info .social-media {
+  margin-top: 120px;
+  padding-bottom: 20px;
+}
+
 .contact-page .contact-info .social-media ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 120px;
-  padding-bottom: 20px;
 }
 
 .contact-page .contact-info .social-media ul a:hover {
@@ -921,4 +930,60 @@ footer p {
   position: absolute;
   top: -200px;
   right: -100px;
+}
+
+@media (max-width: 1355px), (max-height: 910px) {
+  .contact-header {
+    height: auto;
+    padding-bottom: 100px;
+  }
+  .contact-page {
+    position: static;
+  }
+  .contact-page .contact-info {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    margin: 60px 0px;
+    text-align: center;
+  }
+  .contact-page .contact-info .social-media {
+    margin-top: 0;
+  }
+  .contact-page .contact-info .social-media ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact-page .form {
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (max-width: 750px) {
+  .personal-information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .personal-information input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-header .header-top {
+    padding-bottom: 80px;
+  }
 }

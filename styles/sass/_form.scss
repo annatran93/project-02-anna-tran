@@ -49,3 +49,16 @@ form.submit {
     box-shadow:-30px 30px $orange;
     padding:30px 60px;
 }
+
+@media (max-width: 1355px) {
+    form.submit {
+        box-shadow:none;
+    }
+}
+
+@media (max-width: 750px) {
+    form.submit {
+        padding: 0;
+        background:none;
+    }
+}
