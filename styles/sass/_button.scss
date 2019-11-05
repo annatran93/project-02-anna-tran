@@ -3,6 +3,26 @@ button {
     border:none;
 }
 
+.intro a, .season-additions a, .monthly-shoe a {
+    color:$white;
+    display:inline-block;
+}
+
+.intro a {
+    width:200px;
+    margin:20px 0px;
+}
+
+.season-additions a {
+    width:160px;
+    margin:20px 0px;
+}
+
+.monthly-shoe a {
+    width:200px;
+    margin:20px 0px;
+}
+
 .purple-btn {
     background: $purple;
     border:1px solid $purple;

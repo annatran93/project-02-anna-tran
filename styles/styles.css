@@ -318,6 +318,26 @@ button {
   border: none;
 }
 
+.intro a, .season-additions a, .monthly-shoe a {
+  color: white;
+  display: inline-block;
+}
+
+.intro a {
+  width: 200px;
+  margin: 20px 0px;
+}
+
+.season-additions a {
+  width: 160px;
+  margin: 20px 0px;
+}
+
+.monthly-shoe a {
+  width: 200px;
+  margin: 20px 0px;
+}
+
 .purple-btn {
   background: #4c0341;
   border: 1px solid #4c0341;
@@ -666,12 +686,10 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-}
-
-.intro .wrapper button {
-  width: 200px;
-  margin: 20px auto;
 }
 
 .season-additions {
@@ -747,11 +765,6 @@ footer p {
   padding-top: 100px;
 }
 
-.season-additions button {
-  width: 160px;
-  margin: 20px 0px;
-}
-
 .brand-info {
   padding: 150px 0px 50px 0px;
 }
@@ -814,11 +827,6 @@ footer p {
 
 .monthly-shoe .content {
   width: 70%;
-}
-
-.monthly-shoe .content button {
-  width: 200px;
-  margin: 20px 0px;
 }
 
 .gallery {
