@@ -3,9 +3,21 @@ form {
     flex-direction:column;
 }
 
+// INPUT AND TEXTAREAS ----------------------------------------
 input, textarea {
     background:none;
     border:none;
+}
+
+input, input::placeholder,
+textarea, textarea::placeholder {
+    font-size:2rem;
+    letter-spacing:1px;
+}
+
+input::placeholder, textarea::placeholder {
+    line-height:3.2rem;
+    color:$black;
 }
 
 input[name=name], input[name=email] {
@@ -27,47 +39,25 @@ textarea {
     resize:none;
 }
 
-button {
-    margin-bottom:30px;
-}
-
 .personal-information {
     display:flex;
     justify-content:space-between;
 }
 
 
-// BLOG FORM
-form.comment {
+// BLOG FORM ----------------------------------------
+.blog-form {
     grid-column-start:1;
     grid-column-end:2;
 }
 
-// CONTACT FORM
-form.submit {
+// CONTACT FORM ----------------------------------------
+.contact-form {
     background:$white;
     box-shadow:-30px 30px $orange;
     padding:30px 60px;
-}
-
-@media (max-width: 1175px) {
-    form.comment button {
-        margin:0;
-    }
-}
-
-@media (max-width: 1050px) {
-    form.submit {
-        box-shadow:none;
-    }
-}
-
-@media (max-width: 750px) {
-    form.submit {
-        padding: 0;
-        background:none;
-    }
-    input[name=name] {
-        margin: 0;
-    }
+    width:70%;
+    position:absolute;
+    top:-200px;
+    right:-100px;
 }

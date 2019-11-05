@@ -4,13 +4,42 @@ header {
     .wrapper {
         flex-direction: column;
         padding-top:20px;
-        .header-top {
-            display:flex;
-            justify-content:space-between;
-            li {
-                margin-left:30px;
-                display:inline-block;
-            }
-        }
+    }
+}
+
+.header-top {
+    display:flex;
+    justify-content:space-between;
+    li {
+        margin-left:30px;
+        display:inline-block;
+    }
+}
+
+
+// BLOG HEADER -------------------------------------
+.blog-header {
+    height:60vh;
+    background-image: url(../assets/blog-header.jpg);
+    .header-top {
+        padding-bottom:100px;
+    }
+    h2 {
+        text-align:center;
+    }
+}
+
+
+// CONTACT PAGE HEADER -------------------------------------
+.contact-header {
+    height:60vh;
+    background-image: url(../assets/contact-image.jpg);
+    background-size: cover;
+    background-position: left;
+    .header-top {
+        padding-bottom:140px;
+    }
+    h2 {
+        text-align:center;
     }
 }

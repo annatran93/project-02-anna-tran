@@ -1,4 +1,4 @@
-/* HAMBURGER STYLES ----------------------------------- */
+// HAMBURGER MENU ---------------------------------------------
 input[type="checkbox"],
 label[for="hamburger"],
 ul.hamburger {
@@ -6,10 +6,12 @@ ul.hamburger {
     /* APPEAR LATER @media (max-width:1090px) */
 }
 
+
+// HAMBURGER ICON ---------------------------------------------
 /* GOT HELP FROM A TUTORIAL */
 /* https://w3bits.com/animated-menu-icon-css/ */
 .hamburger-icon {
-  width: 40px;
+    width: 40px;
 }
 
 .hamburger-icon:after, 
@@ -22,85 +24,22 @@ ul.hamburger {
 .hamburger-icon:after, 
 .hamburger-icon:before, 
 .hamburger-icon div {
-  background-color: $white;
-  border-radius: 3px;
-  height: 5px;
-  margin: 7px 0;
-  transition: all .5s ease-in-out;
+    background-color: $white;
+    border-radius: 3px;
+    height: 5px;
+    margin: 7px 0;
+    transition: all .5s ease-in-out;
 }
 
 .hamburger-icon:hover:before {
-  transform: translateY(12px) rotate(135deg);
+    transform: translateY(12px) rotate(135deg);
 }
 
 .hamburger-icon:hover:after {
-  transform: translateY(-12px) rotate(-135deg);
+    transform: translateY(-12px) rotate(-135deg);
 }
 
 .hamburger-icon:hover div {
-  transform: scale(0);
-  /* MAKES THE DIV DISAPPEAR */
-}
-
-
-@media (max-width:1090px) {
-    /* DISAPPEAR */
-    .header-top nav {
-        display:none;
-    }
-    /* APPEAR */
-    ul.hamburger {
-        position:absolute;
-        z-index:2;
-        width:50%;
-        right:0px;
-        top:-200%;
-        height:100%;
-        transition: all 1s;
-        display:block;
-        /* DISAPPEAR TO APPEAR */
-    }
-    ul.hamburger li {
-        text-align:left;
-        background:rgba($purple,.99);
-        border:1px solid $white;
-        transition:all 0.3s;
-    }
-    ul.hamburger a {
-        display:inline-block;
-        /* ACCEPT DIMENSIONS */
-        font-size:8rem;
-        padding:10%;
-        transition:all 0.3s;
-        font-weight:bolder;
-        color:$white;
-        font-family:$headings;
-    }
-    ul.hamburger li:hover {
-        background:rgba($purple,.8);
-    }
-    ul.hamburger a:hover {
-        text-transform:capitalize;
-    }
-    input[type="checkbox"]:checked + ul.hamburger {
-        top:0;
-    }
-    label[for="hamburger"] {
-        position:fixed;
-        top:20px;
-        right:20px;
-        cursor:pointer;
-        display:block;
-        /* DISAPPEAR TO APPEAR */
-        z-index:3;
-    }
-}
-
-@media (max-width:915px) {
-    ul.hamburger {
-        width:100%;
-        li {
-            text-align:center;
-        }
-    }
+    transform: scale(0);
+    /* MAKES THE DIV DISAPPEAR */
 }

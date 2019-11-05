@@ -1,4 +1,4 @@
-// HEADER 
+// HEADER -------------------------------------------
 .home-header {
     height:100vh;
     background-image: url(../assets/header-image.jpg);
@@ -7,19 +7,10 @@
     }
 }
 
-// INTRO
+// INTRO -------------------------------------------
 .intro {
     padding:200px 0px;
     position:relative;
-    .intro-image {
-        position:absolute;
-        top:-80vh;
-        right:0px;
-        width:45vw;
-        img {
-            width:100%;
-        }
-    }
     .wrapper {
         flex-direction:column;
         align-items:center;
@@ -27,7 +18,18 @@
     }
 }
 
-// SEASON ADDITIONS
+.intro-image {
+    position:absolute;
+    top:-80vh;
+    right:0px;
+    width:45vw;
+    img {
+        width:100%;
+    }
+}
+
+
+// SEASON ADDITIONS -------------------------------------------
 .season-additions {
     display:flex;
     flex-wrap:wrap;
@@ -43,7 +45,6 @@
         img {
             box-shadow: 30px 30px $orange;
             width:100%;
-            // display:none;
         }
     }
     figure:nth-of-type(2) {
@@ -56,7 +57,6 @@
         img {
             box-shadow: -30px 30px $orange;
             width:100%;
-            // display:none;
         }
     }
     .wrapper {
@@ -66,56 +66,56 @@
         div {
             width: 50%;
         }
-        .right-content {
-            padding-left:100px;
-            padding-bottom: 100px;
-            align-self:flex-end;
-        }
-        .left-content {
-            text-align:right;
-            padding-right:100px;
-            padding-top: 100px;
-        }
+    }
+    .right-content {
+        padding-left:100px;
+        padding-bottom: 100px;
+        align-self:flex-end;
+    }
+    .left-content {
+        text-align:right;
+        padding-right:100px;
+        padding-top: 100px;
     }
 }
 
 
-// BRAND INFO
+// BRAND INFO -------------------------------------------
 .brand-info {
     padding:150px 0px 50px 0px;
     ul {
         display:flex;
         flex-wrap:wrap;
-        li {
-            width:50%;
-            display:flex;
-            flex-wrap:wrap;
-            .icon {
-                width:15%;
-                i {
-                    background:$purple;
-                    padding:15px;
-                    border-radius:100%;
-                }
-            }
-            .content {
-                width:85%;
-                padding-bottom:50px;
-                &:nth-of-type(odd) {
-                    padding-right:50px;
-                }
-            }
+    }
+    li {
+        width:50%;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .icon {
+        width:15%;
+    }
+    i {
+        background:$purple;
+        padding:15px;
+        border-radius:100%;
+    }
+    .content {
+        width:85%;
+        padding-bottom:50px;
+        &:nth-of-type(odd) {
+            padding-right:50px;
         }
     }
 }
 
 
-// BANNER
+// BANNER -------------------------------------------
 .banner img {
     width:100%;
 }
 
-// POPULAR
+// POPULAR -------------------------------------------
 .monthly-shoe {
     padding:150px 0px 100px 0px;
     background:$white;
@@ -123,9 +123,9 @@
         width:30%;
         position:relative;
         top:-30px;
-        img {
-            box-shadow: 30px 30px $orange;
-        }
+    }
+    img {
+        box-shadow: 30px 30px $orange;
     }
     .content {
         width:70%;
@@ -138,193 +138,19 @@
     padding: 50px 0px;
     .wrapper {
         justify-content:center;
-        ul {
-            display:flex;
-            width:100%;
-            justify-content:space-between;
-            li {
-                width:calc(100% / 3);
-                &:nth-of-type(2) {
-                    margin:0px 30px;
-                }
-                img {
-                    width:100%;
-                }
-            }
-        }
     }
-}
-
-
-@media (max-height:910px) {
-    .home-header {
-        height:auto;
-        padding-bottom: 300px;
-    }
-    .intro .intro-image {
-        top:-60vh;
-        width:35vw;
-    }
-}
-
-@media (max-width:1730px) {
-    .intro .intro-image {
-        top:-70vh;
-    }
-    .season-additions {
-        height:940px;
-    }
-    .season-additions .wrapper .right-content {
-        padding-bottom: 30px;
-    }
-    .season-additions .wrapper .left-content {
-        padding-top: 30px;
-    }
-}
-
-@media (max-width:1580px) {
-    .monthly-shoe {
-        .content {
-            width:70%;
-            padding-left: 60px;
-        }
-    }
-}
-
-@media (max-width:1490px) {
-    .intro .intro-image {
-        top:-60vh;
-    }
-    .home-header ul {
+    ul {
         display:flex;
-        flex-direction:column;
-    }
-    .season-additions {
-        height:880px;
-    }
-    .season-additions .wrapper .right-content {
-        padding-bottom: 0px;
-    }
-    .season-additions .wrapper .left-content {
-        padding-top: 0px;
-    }
-}
-
-@media (max-width:1280px) {
-    .intro .intro-image {
-        top:-50vh;
-    }
-    .intro {
-        padding:200px 0px 100px 0px;
-    }
-    .season-additions {
-        padding: 0;
-        height:auto;
-        figure:nth-of-type(1) {
-            margin-right: 0;
-            width:100%;
-            position:static;
-            img {
-                box-shadow: none;
-                height:400px;
-                object-fit: cover;
-                // display:none;
-            }
-        }
-        figure:nth-of-type(2) {
-            margin-left: 0;
-            order:0;
-            width:100%;
-            position:static;
-            img {
-                box-shadow: none;
-                height:400px;
-                object-fit: cover;
-                // display:none;
-            }
-        }
-        .wrapper {
-            display:block;
-            div {
-                width: 100%;
-                margin: 60px 0;
-            }
-            .right-content {
-                padding-left:0px;
-                text-align:center;
-            }
-            .left-content {
-                text-align:center;
-                padding-right:0px;
-            }
-        }
-    }
-    .monthly-shoe {
-        .wrapper {
-            flex-direction: column;
-            text-align:center;
-        }
-        figure {
-            width:100%;
-            position:relative;
-            img {
-                box-shadow: none;
-                margin:0 auto;
-            }
-        }
-        .content {
-            width:100%;
-            padding-left: 0px;
-        }
-    }
-}
-
-
-@media(max-width:1090px) {
-    .home-header {
-        height:auto;
-        padding-bottom: 260px;
-        p.logo {
-            color:$white;
-        }
-    }
-    .intro .intro-image {
-        display:none;
-    }
-    .intro {
-        padding:100px 0px;
-    }
-    .brand-info ul li {
         width:100%;
+        justify-content:space-between;
     }
-    .brand-info ul li .content {
-        width:85%;
-        &:nth-of-type(1),
-        &:nth-of-type(3) {
-            padding-right:0px;
+    li {
+        width:calc(100% / 3);
+        &:nth-of-type(2) {
+            margin:0px 30px;
         }
     }
-}
-
-@media(max-width:900px) {
-    .gallery .wrapper ul li {
-        width:calc(100% / 2);
-    }
-    .gallery .wrapper ul li:nth-of-type(2) {
-        display:none;
-    }
-    .gallery .wrapper ul li:nth-of-type(3) {
-        margin-left: 10px;
-    }
-}
-
-@media(max-width:600px) {
-    .brand-info ul li .icon,
-    .brand-info ul li .content {
+    img {
         width:100%;
-        text-align:center;
-    }
-    .brand-info ul li .icon i {
-        margin-bottom: 15px;
     }
 }

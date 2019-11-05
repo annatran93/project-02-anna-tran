@@ -2,33 +2,21 @@ html {
     font-size: 62.5%;
 }
 
-@media (max-height:910px) {
-    html {
-        font-size:50%;
-    }
-}
-
 body {
     color:$black;
     font-family: $base;
 }
 
+
+// HEADINGS -----------------------------------
 h1, h2, h3, h4, h5 {
     font-family: $headings;
     color: $purple;
     margin:0;
 }
 
-h3, h4, h5, button {
+h3, h4, h5 {
     text-transform: uppercase;
-}
-
-p.logo {
-    font-size:3.58rem;
-    line-height:3.6rem;
-    letter-spacing:1.1px;
-    font-family: $headings;
-    color:$black;
 }
 
 h1 {
@@ -57,7 +45,19 @@ h5 {
     letter-spacing:1.3px;
 }
 
-a, p, button, input::placeholder, input, textarea::placeholder, textarea {
+
+// LOGO -----------------------------------
+p.logo {
+    font-size:3.58rem;
+    line-height:3.6rem;
+    letter-spacing:1.1px;
+    font-family: $headings;
+    color:$black;
+}
+
+
+// ANCHORS AND PARAGRAPHS -----------------------------------
+a, p {
     font-size:2rem;
     letter-spacing:1px;
 }
@@ -70,11 +70,14 @@ a {
     text-transform:uppercase;
 }
 
-p, input::placeholder, textarea::placeholder {
+p {
     line-height:3.2rem;
     color:$black;
+    margin:0;
 }
 
+
+// ICONS -----------------------------------
 .brand-info i, button {
     color:$white;
 }

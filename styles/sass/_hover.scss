@@ -1,4 +1,4 @@
-// NAVIGATION 
+// NAVIGATION -------------------------------------
 header {
     a {
         position:relative;
@@ -17,9 +17,41 @@ header {
         color:$white;
     }
     a:hover::after {
-    background:$purple;
-    height:100%;
-    top:0;
-    z-index:-1;
+        background:$purple;
+        height:100%;
+        top:0;
+        z-index:-1;
+    }
+}
+
+
+// BUTTON -------------------------------------
+.purple-btn:hover {
+    color:$purple;
+    border:1px solid $purple;
+    background:$white;
+}
+
+.brown-btn:hover {
+    color:$brown;
+    border:1px solid $brown;
+    background:$white;
+}
+
+
+// CONTACT PAGE
+a.email, a.phone {
+    transition: all .5s;
+    &:hover {
+        color:$orange;
+        padding-left:50px;
+    }
+}
+
+.social-media i {
+    transition: transform .5s, color 1s;
+    &:hover {
+        color:$orange;
+        transform:rotateZ(40deg);
     }
 }

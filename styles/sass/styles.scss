@@ -11,6 +11,7 @@ $base: 'Lato', sans-serif;
 
 @import 'setup';
 @import 'typography';
+
 @import 'spans';
 @import 'button';
 @import 'hover';
@@ -19,6 +20,8 @@ $base: 'Lato', sans-serif;
 @import 'hamburger';
 @import 'form';
 @import 'footer';
+
 @import 'home';
 @import 'blog';
 @import 'contact';
+@import 'mqueries'; 

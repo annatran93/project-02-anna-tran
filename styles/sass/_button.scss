@@ -1,9 +1,31 @@
+// BUTTON BUTTONS -------------------------------------
 button {
     padding:10px 0px;
     border:none;
+    text-transform: uppercase;
+    font-size:2rem;
+    letter-spacing:1px;
+    margin-bottom:30px;
 }
 
-.intro a, .season-additions a, .monthly-shoe a {
+.purple-btn {
+    background: $purple;
+    border:1px solid $purple;
+    transition: all.5s;
+}
+
+.brown-btn {
+    background: $brown;
+    border:1px solid $brown;
+    transition: all .5s;
+}
+
+
+
+// ANCHOR BUTTONS -------------------------------------
+.intro a,
+.season-additions a,
+.monthly-shoe a {
     color:$white;
     display:inline-block;
 }
@@ -21,26 +43,4 @@ button {
 .monthly-shoe a {
     width:200px;
     margin:20px 0px;
-}
-
-.purple-btn {
-    background: $purple;
-    border:1px solid $purple;
-    transition: all.5s;
-    &:hover {
-        color:$purple;
-        border:1px solid $purple;
-        background:$white;
-    }
-}
-
-.brown-btn {
-    background: $brown;
-    border:1px solid $brown;
-    transition: all .5s;
-    &:hover {
-        color:$brown;
-        border:1px solid $brown;
-        background:$white;
-    }
 }
