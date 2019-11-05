@@ -435,7 +435,7 @@ input[type="checkbox"],
 label[for="hamburger"],
 ul.hamburger {
   display: none;
-  /* APPEAR LATER @media (max-width:1110px) */
+  /* APPEAR LATER @media (max-width:1090px) */
 }
 
 /* GOT HELP FROM A TUTORIAL */
@@ -675,12 +675,13 @@ footer p {
 }
 
 .season-additions {
-  padding-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
   background: white;
   position: relative;
   height: 1000px;
@@ -733,19 +734,17 @@ footer p {
   width: 50%;
 }
 
-.season-additions .wrapper div.right-content {
+.season-additions .wrapper .right-content {
   padding-left: 100px;
+  padding-bottom: 100px;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
-.season-additions .wrapper div.left-content {
+.season-additions .wrapper .left-content {
   text-align: right;
   padding-right: 100px;
-}
-
-.season-additions h4 {
-  margin-top: 20px;
+  padding-top: 100px;
 }
 
 .season-additions button {
@@ -854,12 +853,29 @@ footer p {
   width: 100%;
 }
 
-@media (max-width: 1690px) {
+@media (max-height: 910px) {
+  .home-header {
+    height: auto;
+    padding-bottom: 300px;
+  }
+  .intro .intro-image {
+    top: -60vh;
+    width: 35vw;
+  }
+}
+
+@media (max-width: 1730px) {
   .intro .intro-image {
     top: -70vh;
   }
   .season-additions {
-    height: 900px;
+    height: 940px;
+  }
+  .season-additions .wrapper .right-content {
+    padding-bottom: 30px;
+  }
+  .season-additions .wrapper .left-content {
+    padding-top: 30px;
   }
 }
 
@@ -874,9 +890,6 @@ footer p {
   .intro .intro-image {
     top: -60vh;
   }
-  .season-additions {
-    height: 800px;
-  }
   .home-header ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -885,6 +898,15 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .season-additions {
+    height: 880px;
+  }
+  .season-additions .wrapper .right-content {
+    padding-bottom: 0px;
+  }
+  .season-additions .wrapper .left-content {
+    padding-top: 0px;
   }
 }
 
@@ -931,13 +953,13 @@ footer p {
   }
   .season-additions .wrapper div {
     width: 100%;
-    padding: 60px 0;
+    margin: 60px 0;
   }
-  .season-additions .wrapper div.right-content {
+  .season-additions .wrapper .right-content {
     padding-left: 0px;
     text-align: center;
   }
-  .season-additions .wrapper div.left-content {
+  .season-additions .wrapper .left-content {
     text-align: center;
     padding-right: 0px;
   }
@@ -1066,7 +1088,7 @@ footer p {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 490px 30px 30px 30px;
+  padding: 490px 60px 30px 30px;
 }
 
 .blog-page aside .aside-wrapper .recent-posts {
@@ -1134,7 +1156,6 @@ footer p {
   display: grid;
   -ms-grid-columns: 85% 15%;
       grid-template-columns: 85% 15%;
-  padding-left: 60px;
   margin-bottom: 60px;
 }
 
@@ -1146,6 +1167,7 @@ footer p {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 2;
+  padding-left: 60px;
 }
 
 .blog-page main .comments .comment-container article {
@@ -1176,7 +1198,7 @@ footer p {
     padding: 430px 0px 60px 60px;
   }
   .blog-page aside .aside-wrapper {
-    padding: 480px 30px 30px 30px;
+    padding: 430px 30px 30px 30px;
   }
 }
 
@@ -1185,13 +1207,13 @@ footer p {
     padding: 330px 0px 60px 60px;
   }
   .blog-page aside .aside-wrapper {
-    padding: 400px 30px 30px 30px;
+    padding: 370px 30px 30px 30px;
   }
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1280px) {
   .blog-page main .featured-post .featured-post-content {
-    padding: 230px 0px 60px 60px;
+    padding: 250px 0px 60px 60px;
   }
   .blog-page aside .aside-wrapper {
     padding: 320px 30px 30px 30px;
@@ -1231,8 +1253,10 @@ footer p {
     padding: 60px 60px;
   }
   .blog-page main .comments {
-    padding: 0px 60px;
     margin: 0;
+  }
+  .blog-page main .comments .comment-container {
+    padding: 0px 60px;
   }
   .blog-page .aside-image {
     display: none;
@@ -1265,6 +1289,9 @@ footer p {
   .blog-page main .comments .comment-container article img {
     border-radius: 100%;
   }
+  .blog-page main .comments .comment-container {
+    padding: 0;
+  }
 }
 
 @media (max-width: 555px) {
@@ -1273,9 +1300,6 @@ footer p {
   }
   .blog-page main .featured-post .featured-post-content {
     padding: 30px 30px;
-  }
-  .blog-page main .comments {
-    padding: 0px 30px;
   }
   .blog-page aside .aside-wrapper {
     padding: 30px 30px;

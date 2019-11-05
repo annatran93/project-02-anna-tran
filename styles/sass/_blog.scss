@@ -36,7 +36,7 @@
             display:flex;
             flex-direction:column;
             justify-content:flex-end;
-            padding: 490px 30px 30px 30px;
+            padding: 490px 60px 30px 30px;
             .recent-posts {
                 padding-top: 60px;
                 ul {
@@ -87,7 +87,6 @@
         .comments {
             display:grid;
             grid-template-columns:85% 15%;
-            padding-left:60px;
             margin-bottom:60px;
             h3 {
                 padding-bottom:30px;
@@ -95,6 +94,7 @@
             .comment-container {
                 grid-column-start:1;
                 grid-column-end:2;
+                padding-left:60px;
                 article {
                     display:flex;
                     figure {
@@ -124,7 +124,7 @@
         padding:430px 0px 60px 60px;
     }
     .blog-page aside .aside-wrapper {
-        padding: 480px 30px 30px 30px;
+        padding: 430px 30px 30px 30px;
     }
 }
 
@@ -133,13 +133,13 @@
         padding:330px 0px 60px 60px;
     }
     .blog-page aside .aside-wrapper {
-        padding: 400px 30px 30px 30px;
+        padding: 370px 30px 30px 30px;
     }
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1280px) {
     .blog-page main .featured-post .featured-post-content {
-        padding:230px 0px 60px 60px;
+        padding:250px 0px 60px 60px;
     }
     .blog-page aside .aside-wrapper {
         padding: 320px 30px 30px 30px;
@@ -167,8 +167,10 @@
             padding:60px 60px;
         }
         main .comments {
-            padding:0px 60px;
             margin:0;
+        }
+        main .comments .comment-container {
+            padding:0px 60px;
         }
         .aside-image {
             display:none;
@@ -197,6 +199,9 @@
     .blog-page main .comments .comment-container article img {
         border-radius:100%;
     }
+    .blog-page main .comments .comment-container {
+        padding:0;
+    }
 }
 
 @media (max-width:555px) {
@@ -205,9 +210,6 @@
     }
     .blog-page main .featured-post .featured-post-content {
         padding:30px 30px;
-    }
-    .blog-page main .comments {
-        padding:0px 30px;
     }
     .blog-page aside .aside-wrapper {
         padding: 30px 30px;
