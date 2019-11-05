@@ -157,7 +157,7 @@
             li {
                 width:calc(100% / 3);
                 &:nth-of-type(2) {
-                    margin:0px 10px;
+                    margin:0px 30px;
                 }
                 img {
                     width:100%;
@@ -191,6 +191,10 @@
     }
     .season-additions {
         height:800px;
+    }
+    .home-header ul {
+        display:flex;
+        flex-direction:column;
     }
 }
 
@@ -268,6 +272,9 @@
     .home-header {
         height:auto;
         padding-bottom: 260px;
+        p.logo {
+            color:$white;
+        }
     }
     .intro .intro-image {
         display:none;
@@ -295,7 +302,7 @@
         display:none;
     }
     .gallery .wrapper ul li:nth-of-type(3) {
-        margin-left: 5px;
+        margin-left: 10px;
     }
 }
 
