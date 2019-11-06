@@ -463,6 +463,10 @@ header .wrapper {
   display: inline-block;
 }
 
+header.home .header-top {
+  padding-bottom: 200px;
+}
+
 header.blog {
   height: 60vh;
   background-image: url(../assets/blog-header.jpg);
@@ -661,10 +665,6 @@ footer p {
 header.home {
   height: 100vh;
   background-image: url(../assets/header-image.jpg);
-}
-
-header.home .header-top {
-  padding-bottom: 200px;
 }
 
 .intro {
@@ -1139,7 +1139,7 @@ section.comments h3 {
 
 @media (max-width: 490px) {
   ul.hamburger {
-    width: 55%;
+    width: 90%;
   }
 }
 
@@ -1302,14 +1302,30 @@ section.comments h3 {
   }
 }
 
-@media (max-height: 910px) {
-  header.home {
-    height: auto;
-    padding-bottom: 300px;
+@media (max-height: 500px) {
+  header.home .header-top {
+    padding-bottom: 50px;
   }
   .intro-image {
-    top: -60vh;
-    width: 35vw;
+    display: none;
+  }
+}
+
+@media (min-height: 501px) and (max-height: 599px) {
+  header.home .header-top {
+    padding-bottom: 50px;
+  }
+  .intro-image {
+    margin-top: -150px;
+  }
+}
+
+@media (min-height: 600px) and (max-height: 890px) {
+  header.home .header-top {
+    padding-bottom: 100px;
+  }
+  .intro-image {
+    margin-top: -100px;
   }
 }
 
