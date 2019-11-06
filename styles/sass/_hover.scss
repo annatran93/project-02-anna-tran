@@ -40,11 +40,10 @@ header {
 
 
 // CONTACT PAGE
-a.email, a.phone {
+.contact-info a.email, a.phone {
     transition: all .5s;
     &:hover {
         color:$orange;
-        padding-left:50px;
     }
 }
 
@@ -52,6 +51,6 @@ a.email, a.phone {
     transition: transform .5s, color 1s;
     &:hover {
         color:$orange;
-        transform:rotateZ(40deg);
+        animation: grow 1s linear infinite;
     }
 }

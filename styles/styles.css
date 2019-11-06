@@ -323,6 +323,28 @@ button {
   margin: 20px 0px;
 }
 
+@-webkit-keyframes grow {
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 header a {
   position: relative;
   z-index: 1;
@@ -362,14 +384,13 @@ header a:hover::after {
   background: white;
 }
 
-a.email, a.phone {
+.contact-info a.email, a.phone {
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 
-a.email:hover, a.phone:hover {
+.contact-info a.email:hover, a.phone:hover {
   color: #fe6f19;
-  padding-left: 50px;
 }
 
 .social-media i {
@@ -381,8 +402,8 @@ a.email:hover, a.phone:hover {
 
 .social-media i:hover {
   color: #fe6f19;
-  -webkit-transform: rotateZ(40deg);
-          transform: rotateZ(40deg);
+  -webkit-animation: grow 1s linear infinite;
+          animation: grow 1s linear infinite;
 }
 
 body {
@@ -474,13 +495,13 @@ input[type="checkbox"],
 label[for="hamburger"],
 ul.hamburger {
   display: none;
-  /* APPEAR LATER @media (max-width:1090px) */
+  /* APPEAR LATER @media (max-width:900px) */
 }
 
 /* GOT HELP FROM A TUTORIAL */
 /* https://w3bits.com/animated-menu-icon-css/ */
 .hamburger-icon {
-  width: 40px;
+  width: 35px;
 }
 
 .hamburger-icon:after,
@@ -494,21 +515,27 @@ ul.hamburger {
 .hamburger-icon:before,
 .hamburger-icon div {
   background-color: white;
+  -webkit-box-shadow: 1px 1px #4c0341;
+          box-shadow: 1px 1px #4c0341;
   border-radius: 3px;
-  height: 5px;
-  margin: 7px 0;
+  height: 3px;
+  margin: 6px 0;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
 
 .hamburger-icon:hover:before {
-  -webkit-transform: translateY(12px) rotate(135deg);
-          transform: translateY(12px) rotate(135deg);
+  -webkit-transform: translateY(6px) rotate(135deg);
+          transform: translateY(6px) rotate(135deg);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .hamburger-icon:hover:after {
   -webkit-transform: translateY(-12px) rotate(-135deg);
           transform: translateY(-12px) rotate(-135deg);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .hamburger-icon:hover div {
@@ -1055,7 +1082,7 @@ section.comments h3 {
   }
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 900px) {
   /* DISAPPEAR */
   .header-top nav {
     display: none;
@@ -1102,7 +1129,7 @@ section.comments h3 {
   }
   label[for="hamburger"] {
     position: fixed;
-    top: calc(20px - 7px);
+    top: 20px;
     right: 20px;
     cursor: pointer;
     display: block;
@@ -1112,11 +1139,7 @@ section.comments h3 {
 
 @media (max-width: 490px) {
   ul.hamburger {
-    width: 100%;
-  }
-  ul.hamburger li {
-    text-align: center;
-    border-left: none;
+    width: 55%;
   }
 }
 
@@ -1324,6 +1347,12 @@ section.comments h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  header.home li {
+    margin-bottom: 5px;
   }
   .season-additions {
     height: 880px;
@@ -1455,6 +1484,9 @@ section.comments h3 {
   header.home h1, header.home p.logo {
     color: white;
     text-shadow: 2px 2px 1px #4c0341;
+  }
+  header.home h1 {
+    font-size: 9rem;
   }
 }
 
