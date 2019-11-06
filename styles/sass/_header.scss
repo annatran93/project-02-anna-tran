@@ -18,7 +18,7 @@ header {
 
 
 // BLOG HEADER -------------------------------------
-.blog-header {
+header.blog {
     height:60vh;
     background-image: url(../assets/blog-header.jpg);
     .header-top {
@@ -31,7 +31,7 @@ header {
 
 
 // CONTACT PAGE HEADER -------------------------------------
-.contact-header {
+header.contact {
     height:60vh;
     background-image: url(../assets/contact-image.jpg);
     background-size: cover;

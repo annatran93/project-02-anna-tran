@@ -109,7 +109,7 @@
 
 // CONTACT PAGE --------------------------------------------------
 @media (max-height:910px) {
-    .contact-header {
+    header.contact {
         height:auto;
         padding-bottom:230px;
     }
@@ -144,7 +144,7 @@
 
 // BLOG --------------------------------------------------
 @media (max-height:910px) {
-    .blog-header {
+    header.blog {
         height:auto;
         padding-bottom:260px;
     }
@@ -194,7 +194,7 @@
             height:100%;
         }
     }
-    .blog-main-image {
+    .featured-image {
         position:static;
         margin-top:60px;
     }
@@ -202,7 +202,7 @@
         display:flex;
         width:100%;
     }
-    .comments {
+    section.comments {
         grid-template-columns:100%;
         margin:0;
     }
@@ -239,7 +239,7 @@
 }
 
 @media (max-width:555px) {
-    .blog-main-image {
+    .featured-image {
         display:none;
     }
 }
@@ -248,7 +248,7 @@
 
 // HOME --------------------------------------------------
 @media (max-height:910px) {
-    .home-header {
+    header.home {
         height:auto;
         padding-bottom: 300px;
     }
@@ -284,7 +284,7 @@
     .intro-image {
         top:-60vh;
     }
-    .home-header ul {
+    header.home ul {
         display:flex;
         flex-direction:column;
     }
@@ -375,7 +375,7 @@
 
 
 @media(max-width:1090px) {
-    .home-header {
+    header.home {
         height:auto;
         padding-bottom: 260px;
     }
@@ -407,7 +407,7 @@
     .gallery li:nth-of-type(3) {
         margin-left: 10px;
     }
-    .home-header {
+    header.home {
         h1, p.logo {
             color:$white;
             text-shadow: 2px 2px 1px $purple;
